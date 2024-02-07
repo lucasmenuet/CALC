@@ -61,7 +61,7 @@ class SectionTwo extends StatelessWidget{
                       height: 20,
                     ),
                     const Text(
-                      "Box de Coloration",
+                      "Ma proposition en terme de coaching",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 40,
@@ -114,5 +114,38 @@ class SectionTwo extends StatelessWidget{
               ),
             ],
           );
+  }
+}
+
+class SectionThree extends StatelessWidget{
+  const SectionThree({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Image.asset(
+          'assets/om3.jpg',
+          fit: BoxFit.cover
+        ),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.all(50.0),
+            child: Column(
+              children: [
+                Text('Qui suis-je ?', style: TextStyle(fontFamily: 'Rockbell', fontSize: 50, fontStyle: FontStyle.italic)),
+                // SizedBox(height: 50,),
+                Padding(
+                  padding: const EdgeInsets.all(50),
+                  child: Text(
+                    "Please note that the actual names of settings may vary, and it's essential to refer to the documentation or the extension's official page for the most accurate and up-to-date information. \nIf the extension doesn't provide a specific setting for this behavior, you might consider reaching out to the extension's maintainers through the Visual Studio Code marketplace or GitHub repository to request such a feature or inquire about any updates related to this functionality.",
+                    style: TextStyle(fontFamily: 'Rockbell', fontSize: 20)),
+                )
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
